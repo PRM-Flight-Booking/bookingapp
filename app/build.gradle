@@ -1,0 +1,86 @@
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android") // This is the Kotlin plugin
+    id("androidx.navigation.safeargs.kotlin")
+}
+
+android {
+    namespace 'com.example.bookingapp'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.bookingapp"
+        minSdk 27
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.annotation
+    implementation libs.activity
+    implementation libs.lifecycle.viewmodel.ktx
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation 'com.tbuonomo:dotsindicator:4.3'
+
+//    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.1.20")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+
+    // AndroidX UI Components
+    implementation "androidx.appcompat:appcompat:1.6.0"
+    implementation "com.google.android.material:material:1.9.0"
+    implementation "com.squareup.picasso:picasso:2.71828"
+
+    implementation 'androidx.preference:preference:1.1.1'
+
+
+    implementation("com.google.code.gson:gson:2.10.1")
+
+
+    implementation("com.squareup.picasso:picasso:2.8")
+
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.libraries.places:places:3.4.0'
+    implementation 'com.google.zxing:core:3.5.3'
+
+    // coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0"
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+
+    //
+    implementation 'com.google.zxing:core:3.5.2'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+}
