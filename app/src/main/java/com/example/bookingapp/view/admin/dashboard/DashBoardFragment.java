@@ -17,12 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bookingapp.R;
 import com.example.bookingapp.data.database.ShareReferenceHelper;
-import com.example.bookingapp.data.model.Flight;
-import com.example.bookingapp.data.model.Hotel;
-import com.example.bookingapp.data.model.Place;
-import com.example.bookingapp.data.repository.FlightRepository;
-import com.example.bookingapp.data.repository.HotelRepository;
-import com.example.bookingapp.data.repository.PlaceRepository;
 import com.example.bookingapp.view.adapter.DashBoardAdapter;
 import com.example.bookingapp.view.admin.dashboard.flight.EditFlightFragment;
 import com.example.bookingapp.view.admin.dashboard.hotel.DetailHotel2Fragment;
