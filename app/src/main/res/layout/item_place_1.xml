@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="80dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    android:padding="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <!-- Circular Image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/place_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_location"
+            app:strokeWidth="2dp"
+            app:strokeColor="@android:color/darker_gray"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- Destination Name -->
+        <TextView
+            android:id="@+id/place_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Barcelona"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/place_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="12dp"/>
+
+        <!-- Country Name -->
+        <TextView
+            android:id="@+id/place_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Spain"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/place_name"
+            app:layout_constraintStart_toStartOf="@id/place_name"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Rating Section -->
+        <ImageView
+            android:id="@+id/star_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/baseline_star_24"
+            app:layout_constraintTop_toBottomOf="@id/place_country"
+            app:layout_constraintStart_toStartOf="@id/place_name"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/place_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/star_icon"
+            app:layout_constraintTop_toTopOf="@id/star_icon"
+            app:layout_constraintBottom_toBottomOf="@id/star_icon"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
